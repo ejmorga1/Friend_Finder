@@ -21,15 +21,16 @@ module.exports = function (app) {
             };
             scoreArray.push(score);
         };
+        console.log(score);
         for (k = 0; k < 10; k++) {
+            
             if (bestMatchScore < scoreArray[k]) {
                 bestMatchScore = scoreArray[k];
-                index = k;
-            }
+                index = k;        
+            };
         }
         bestMatchFriend = friendData[index];
         friendData.push(user);
-        console.log(bestMatchFriend);
         res.send(bestMatchFriend);
     });
 };
