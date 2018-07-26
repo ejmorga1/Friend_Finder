@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FriendFinder</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" style="font-family: 'Merienda', cursive;">Friend Finder</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">Home</a>
+                <a class="nav-item nav-link active" href="/survey">Survey
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link" href="/api/friends">API Friends List</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <form>
+            <br>
+            <h1 class="text-center display-1">Survey</h1>
+            <hr>
+
+            <h3 class="display-4">About You</h3>
+            <br>
+
+            <div class="form-group">
+                <label for="name">
+                    <h5 class="lead">Name (Required)</h5>
+                </label>
+                <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="photo">
+                    <h5 class="lead">Link to Photo Image (Required)</h5>
+                </label>
+                <input type="text" class="form-control" id="photo" placeholder="Photo">
+            </div>
+
+            <br>
+            <hr>
+
+            <h3 class="display-4">Questions</h3>
+            <br>
+
+            <div class="form-group">
+                <label for="q1">
+                    <h5 class="lead">
+                        <strong>1: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q1">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="q2">
+                    <h5 class="lead">
+                        <strong>2: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q2">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="q3">
+                    <h5 class="lead">
+                        <strong>3: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q3">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="q4">
+                    <h5 class="lead">
+                        <strong>4: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q4">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="q5">
+                    <h5 class="lead">
+                        <strong>5: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q5">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="q6">
+                    <h5 class="lead">
+                        <strong>6: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q6">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="q7">
+                    <h5 class="lead">
+                        <strong>7: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q7">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="q8">
+                    <h5 class="lead">
+                        <strong>8: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q8">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="q9">
+                    <h5 class="lead">
+                        <strong>9: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q9">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <label for="q10">
+                    <h5 class="lead">
+                        <strong>10: </strong>Your mind is always buzzing with unexplored ideas and plans.
+                    </h5>
+                </label>
+                <select class="form-control" id="q10">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+            </div>
+
+            <br>
+
+            <button type="submit" class="btn btn-success btn-lg" id="submit">Submit</button>
+        </form>
+
+        <br>
+        <hr>
+
+        <footer class="footer">
+            <div class="container">
+                <br>
+                <br>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title">
+                        <strong>Best Match</strong>
+                    </h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-name"></h2>
+                    <img id="match-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                        alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal" id="results" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Best Match</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="resultsName"></p>
+                    <img id="resultsPhoto" scr="" alt="Photo of best match">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+
+        var colScore = [];
+
+
+        var newFriend = {
+            name: $("").val(),
+            photo: $("").val(),
+            score: colScore,
+        }
+    })
+</script>
+
+<script>
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+
+        function validate() {
+            /*if ($("#name").val() == "") {
+                return false;
+            };
+            if ($("#photo").val() == "") {
+                return false;
+            };
+            for (i = 1; i <= 10; i++) {
+                quest = "#q" + i;
+                if ($(quest).val() == "") {
+                    return false;
+                };
+            };*/
+            return true;
+        };
+
+        console.log(validate());
+
+        var newFriend = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $(
+                "#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+        };
+
+        $.post("/api/friends", newFriend, function (data) {
+            console.log("posted");
+            $("#resultsName").text(data.name);
+            $("#resultsPhoto").attr("src", data.photo);
+            $("#results").modal("toggle");
+        });
+
+    });
+</script>
